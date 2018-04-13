@@ -1,0 +1,42 @@
+{
+  "name": "AppStrap",
+  "version": "1.0.0",
+  "description": "Bootstrap 4 App Landing Page Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "landing-Page",
+    "bootstrap-4",
+    "mobile-landing-page",
+    "responsive-template"
+  ],
+  "author": "Orbit Themes <themesorbit@gmail.com> (https://orbitthemes.com)",
+  "contributors": [
+    {
+      "name": "Sandeep Prasad Bhatt",
+      "email": "sandeep.bhatt59@gmail.com",
+      "url": "http://sandeepbhatt.com.np/"
+    }
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "^3.2.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "animate.css": "3.6.1",
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.1",
+    "wowjs": "^1.1.3"
+  }
+}

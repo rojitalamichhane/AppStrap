@@ -1,0 +1,103 @@
+#sticky-navigation {
+    background: transparent;
+    padding: 1rem 1rem;
+    @include transitionProperty(all 0.8s ease-in-out);
+    @include media-breakpoint-down(sm) {
+        .navbar-brand {
+            padding-left: 15px;
+            font-size: 1rem;
+            img {
+                height: 36px;
+            }
+        }
+        #mainNavbar {
+            width: 100%;
+            .nav-item {
+                display: block;
+                float: none;
+                text-align: center;
+                max-width: 140px;
+                margin: 0 auto 10px;
+            }
+        }
+    }
+    .navbar-brand {
+        color: $light;
+        display: flex;
+        align-items: center;
+        img {
+            margin-right: 5px;
+            height: 42px;
+        }
+    }
+    #mainNavbar {
+        @include transitionProperty(all 0.3s ease-in-out);
+    }
+    .navbar-toggler {
+        color: $light;
+        outline: none;
+        border: none;
+    }
+    #collapseNavbar {
+        align-items: flex-end;
+        justify-content: flex-end;
+        a {
+            color: $light;
+        }
+        ul {
+            li {
+                @include media-breakpoint-up(md) {
+                    margin-left: 0;
+                }
+                a {
+                    font: 13px/18px $font-family-roboto;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    outline: none;
+                    letter-spacing: 2px;
+                    border: 1px solid transparent;
+                    padding: 9px;
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: $light;
+                    }
+                    &::after {
+                        @include transitionProperty(all 0.35s ease-out 0s);
+                        @include transformScale(0, 1);
+                        @include transformOrigin(center, center, 0px);
+                        border-bottom: 2px solid;
+                        content: "";
+                        display: block;
+                        width: 100%;
+                    }
+                    &:hover::after {
+                        @include transformScale(1, 1);
+                    }
+                }
+            }
+            .buyTemplate {
+                @include media-breakpoint-up(md) {
+                    margin-left: 0.5rem;
+                }
+                a {
+                    border-color: $light;
+                    border-width: 2px;
+                    @include transitionProperty(all 0.4s ease-in-out 0s);
+                    &:hover {
+                        background: $light;
+                        color: $light-dark;
+                    }
+                    &::after {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#sticky-navigation.scrolled {
+    background: #222222 !important;
+    padding: 0.6rem 1rem;
+}

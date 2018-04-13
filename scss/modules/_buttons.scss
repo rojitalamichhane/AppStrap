@@ -1,0 +1,71 @@
+/* buttons */
+
+.btn-rounded {
+    border-radius: 40px !important;
+}
+
+.appBtn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    border-style: solid;
+    border-width: 2px;
+    @include transitionProperty(all 0.3s ease);
+    letter-spacing: 1px;
+    cursor: pointer;
+    line-height: 18px;
+    text-align: center;
+    white-space: nowrap;
+    outline: none;
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+        outline: none;
+    }
+    &.btn-red {
+        background: transparent;
+        border-color: $light-red;
+        color: $light-red;
+        &:hover,
+        &:focus,
+        &:active {
+            background: #fc453f;
+            color: $light;
+        }
+        &.bold {
+            background: $light-red;
+            color: $light;
+            &:hover,
+            &:focus,
+            &:active {
+                background: #fc453f;
+            }
+        }
+    }
+    &.btn-light {
+        background: transparent;
+        border-color: $light;
+        color: $light;
+        &:hover,
+        &:focus,
+        &:active {
+            background: $light;
+            color: #e74c3c;
+        }
+        &.bold {
+            background: $light;
+            color: #e74c3c;
+            border-color: $light;
+            &:hover,
+            &:focus,
+            &:active {
+                background: $light;
+                border-color: #e74c3c;
+                color: #e74c3c;
+            }
+        }
+    }
+}

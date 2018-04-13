@@ -1,0 +1,47 @@
+/* #footer-main ---------------------------------------------------------- */
+
+#footer-main {
+    background: #111;
+    padding: 50px 0;
+    p {
+        text-align: center;
+        color: $light;
+        a {
+            font-weight: 700;
+            color: $light;
+            color: $light-red;
+            &:hover {
+                color: $light-red;
+            }
+        }
+    }
+    .circleSocial {
+        padding: 0;
+        display: table;
+        margin: 0 auto;
+        li {
+            list-style: none;
+            float: left;
+            margin: 2px;
+            a {
+                width: 40px;
+                height: 40px;
+                background: transparent;
+                border: 2px solid $light;
+                color: $light;
+                border-radius: 50%;
+                display: inline-block;
+                text-align: center;
+                line-height: 36px;
+                font-size: 16px;
+                margin: 2px;
+                &:hover,
+                &:focus {
+                    border-color: $light-red;
+                    outline: none;
+                    color: $light-red;
+                }
+            }
+        }
+    }
+}

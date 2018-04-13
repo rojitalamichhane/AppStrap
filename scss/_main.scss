@@ -1,0 +1,565 @@
+/*
+Theme Name: AppStrap
+Theme URI: http://www.orbitthemes.com
+Author: Sandeep Prasad Bhatt
+Author URI: http://www.sandeepbhatt.com.np
+Description: Bootstrap 4 responsive app landing page template
+Create date: February 5, 2018
+Version: 1.0
+License: Commercial, All rights reserved - http://www.orbitthemes.com
+Tags: Responsive Bootstrap 4 template , app landing template 
+Text Domain: templatedomainname.com
+*/
+
+/* Top Banner Section Styles Starts */
+
+#introBanner {
+    .overlay {
+        @include media-breakpoint-up(xs) {
+            padding-top: 100px;
+        }
+        @include media-breakpoint-up(sm) {
+            padding-top: 100px;
+        }
+        @include media-breakpoint-up(md) {
+            padding-top: 0;
+        }
+        .container {
+            height: 100%;
+            .row {
+                height: 100%;
+                overflow: hidden;
+                @include media-breakpoint-up(md) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .col-md-12 {
+                    @include media-breakpoint-up(md) {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+        .left-intro {
+            color: $light;
+            h1 {
+                font-size: 2.2rem;
+                margin: 0 0 20px;
+            }
+            .app-btn-list {
+                .appBtn {
+                    margin: 0 5px;
+                    @include media-breakpoint-down(xs) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        .rightBanner {
+            .mobileBg {
+                @include media-breakpoint-up(xs) {
+                    img {
+                        max-width: 320px;
+                    }
+                }
+                @include media-breakpoint-up(sm) {
+                    img {
+                        max-width: 500px;
+                    }
+                }
+                @include media-breakpoint-up(md) {
+                    img {
+                        max-width: 400px;
+                    }
+                }
+            }
+        }
+    }
+    &.parallaxBg {
+        background: url(../img/background.jpg) no-repeat center center fixed #444;
+    }
+}
+
+/* Top Banner Section Style Ends ----------------------------------------------------------- */
+
+/*App Services Styles Starts -------------------------------------- */
+
+#services {
+    background: $light;
+    padding: 50px 0px;
+    .servicesContent {
+        .appService {
+            color: $light;
+            position: relative;
+            padding: 40px;
+            @include transitionProperty(all 0.3s ease-in-out);
+            z-index: 2;
+            h3 {
+                margin: 20px 0;
+            }
+            p {
+                margin: 0;
+            }
+            .number {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                font-size: 20px;
+                font-weight: 700;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+            }
+            &:hover {
+                transform: scale(1.1, 1.1);
+                z-index: 99;
+            }
+            &.purple {
+                background: #8460a4;
+                .number {
+                    background: #774e9c;
+                }
+            }
+            &.red {
+                background: $light-red;
+                .number {
+                    background: #fc5653;
+                }
+            }
+            &.blue {
+                background: #3dcec7;
+                .number {
+                    background: #2abfb5;
+                }
+            }
+            &.yellow {
+                background: #f4c949;
+                .number {
+                    background: #eabb3a;
+                }
+            }
+            &.dark-blue {
+                background: #2f4050;
+                .number {
+                    background: #222e3b;
+                }
+            }
+            &.dark-red {
+                background: $dark-red;
+                .number {
+                    background: #ff5145;
+                }
+            }
+            &.teal {
+                background: $teal;
+                .number {
+                    background: #00796b;
+                }
+            }
+            &.blue-grey {
+                background: $blue-grey;
+                .number {
+                    background: #263238;
+                }
+            }
+        }
+    }
+}
+
+/* App Services Template Section Style Ends--------------------------------*/
+
+/* About Template Section Styles Starts--------------------------------*/
+
+#aboutContainer {
+    padding: 50px 0;
+    background: $light-grey;
+    .aboutAppContainer {
+        .featureDetails {
+            .thumbnail {
+                text-align: center;
+                margin: 0 0 50px;
+                .iconImage {
+                    margin: 0 0 20px;
+                    i {
+                        font-size: 2.5em;
+                        color: $light-red;
+                    }
+                }
+                .caption {
+                    h3 {
+                        margin: 0 0 15px;
+                        font-weight: 300;
+                    }
+                    p {
+                        color: $dark-grey;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* About Section Style Ends ----------------------------------------------------------- */
+
+/* Features Section style Starts --------------------------------------------------------*/
+
+#features {
+    padding: 50px 0;
+    background: $light;
+    .content {
+        .featureList {
+            margin-bottom: 20px;
+            .info-box {
+                overflow: hidden;
+                @include media-breakpoint-down(md) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-flow: column;
+                    text-align: center;
+                }
+                .iconImage {
+                    i {
+                        border: 1px solid #cbd3dd;
+                        border-radius: 50%;
+                        text-align: center;
+                        font-size: 1.5em;
+                        padding: 20px;
+                        color: $dark-grey;
+                    }
+                    float: left;
+                    width: 25%;
+                    @include media-breakpoint-down(md) {
+                        margin-bottom: 15px;
+                    }
+                }
+                .info {
+                    float: left;
+                    width: 75%;
+                    @include media-breakpoint-up(xs) {
+                        width: 70%;
+                        margin-left: 5%;
+                    }
+                    h2 {
+                        font-size: 1.5em;
+                        font-weight: 400;
+                        color: $dark-grey;
+                    }
+                    p {
+                        font-size: 0.9em;
+                        color: $light-black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#featuresInfo {
+    background: url(../img/Statistics.jpg);
+    .overlay {
+        padding: 50px 0;
+    }
+    .featuredGallery {
+        .statisticsIcons {
+            margin: 0 0 20px;
+        }
+        .gallery-title {
+            font-weight: 300;
+            .statisticsResult {
+                font-size: 3.5em;
+            }
+        }
+    }
+}
+
+/* Features Section style Ends --------------------------------------------------------*/
+
+/* plans Section styles Started --------------------------------------------------------*/
+
+#plans {
+    padding: 50px 0px;
+    background: $light-grey;
+    #pricingTable {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .item {
+        // background: #f0f0f0;
+        border-width: 6px 0 0;
+        border-color: $light-red;
+        border-style: solid;
+        text-align: center;
+        padding: 40px 0px;
+        @include transitionProperty(all 0.3s ease-in-out);
+        z-index: 2;
+        &:hover {
+            transform: scale(1.1, 1.1);
+            z-index: 99;
+        }
+        .package {
+            font-weight: 700;
+            font-size: 30px;
+        }
+        .price {
+            height: 100px;
+            p {
+                color: $light-red;
+                display: inline-block;
+                font-weight: 700;
+                font-size: 70px;
+                height: 100px;
+                position: relative;
+                margin: 0px;
+                line-height: 100px;
+                span {
+                    line-height: normal;
+                    display: inline-block;
+                    font-size: 25px;
+                    font-weight: 700;
+                    position: absolute;
+                    &.currency {
+                        right: -15px;
+                        top: 15px;
+                    }
+                }
+            }
+        }
+        &.popular {
+            background: $light-red;
+            color: $light;
+            border-top: none;
+            transform: scale(1, 1.1);
+            .btn-new {
+                border-color: $light;
+                color: $light;
+            }
+            .price {
+                p {
+                    color: $light;
+                }
+            }
+        }
+        ul {
+            &.plans-list {
+                margin: 0px;
+                padding: 30px 0px;
+                list-style: none;
+                li {
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    padding: 10px 0px;
+                }
+            }
+        }
+    }
+}
+
+/* plans Section style Ends --------------------------------------------------------*/
+
+/* Download Section Styles started --------------------------------------------------------*/
+
+#download {
+    background: url(../img/downloadBg.jpg);
+    .overlay {
+        padding: 50px 0;
+    }
+    .downloadBtnList {
+        padding: 30px 0;
+        a {
+            &.playStoreLink {
+                margin: 10px 20px;
+            }
+            i {
+                float: left;
+                font-size: 3em;
+                margin-right: 10px;
+            }
+            span {
+                font-weight: 400;
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+/* Download Section Style Ends --------------------------------------------------------*/
+
+/* Testimonials Section style Starts --------------------------------------------------------*/
+
+#Testimonials {
+    padding: 50px 0;
+    text-align: center;
+    background: $light;
+    .testimonial {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .testimonial-photo-wrapper {
+        width: 90px;
+        border: 1px solid #cbd3dd;
+        border-radius: 50%;
+        line-height: 0;
+        display: inline-block;
+        vertical-align: top;
+        zoom: 1;
+        *display: inline;
+        margin-bottom: 15px;
+        background-color: $white;
+        position: relative;
+        z-index: 99;
+    }
+    .testimonial-photo-wrapper:after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 120px;
+        height: 1px;
+        background-color: #cbd3dd;
+        top: 50%;
+        left: 50%;
+        margin-left: -60px;
+        @include rotate(-45);
+        z-index: -1;
+    }
+    .testimonial-photo {
+        max-width: 100%;
+        border-radius: 50%;
+        border: 3px solid $white;
+    }
+    .testimonial-name {
+        margin-bottom: 15px;
+        font-size: 1.125em;
+    }
+    .testimonial-text {
+        font-size: 0.9375em;
+        padding: 0 10px;
+        margin: 0;
+    }
+}
+
+/* Testimonials Section Styles Ended ----------------------------------------------------------- */
+
+/* contact Section Styles Started ----------------------------------------------------------- */
+
+#contact {
+    background: url(../img/contactBg.jpg);
+    .overlay {
+        padding: 50px 0 0;
+    }
+    .infoDetails {
+        flex: auto;
+        @include media-breakpoint-up(xs) {
+            .support {
+                font-size: 1.7rem;
+            }
+        }
+        span {
+            &.phone {
+                padding: 0px 20px;
+                background: rgba(255, 255, 255, 0.1);
+                font-weight: 700;
+                @include media-breakpoint-up(xs) {
+                    font-size: 2.3em;
+                }
+                @include media-breakpoint-up(sm) {
+                    font-size: 4.5em;
+                }
+                @include media-breakpoint-up(md) {
+                    font-size: 5.6em;
+                }
+            }
+        }
+    }
+    .contactBg {
+        background: none repeat scroll 0 0 rgba(255, 255, 255, 0.1);
+        padding: 50px 0px;
+        position: relative;
+        z-index: 2;
+        #contactForm {
+            input {
+                background: transparent;
+                border: none;
+                border-bottom: 2px solid #f74f4c;
+                height: 40px;
+                margin-bottom: 20px;
+                padding: 10px;
+                width: 100%;
+                color: #f74f4c;
+                outline: none;
+            }
+            textarea {
+                background: transparent;
+                border: none;
+                border-bottom: 2px solid #f74f4c;
+                height: 40px;
+                max-height: 120px;
+                resize: none;
+                margin-bottom: 50px;
+                overflow: hidden;
+                padding: 10px;
+                width: 100%;
+                color: #f74f4c;
+                outline: none;
+            }
+        }
+    }
+}
+
+/* Contact Section Styles Ended ----------------------------------------------------------- */
+
+/* Subscribe Section Styles Started ----------------------------------------------------------- */
+
+.subscribeSection {
+    padding: 50px 0;
+    background-color: #ff6858;
+    color: $light;
+    .subscribe-form {
+        position: relative;
+        .form-control {
+            width: 100%;
+            font-size: 20px;
+            height: auto;
+            padding: 10px 70px 10px 15px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+            height: 52px;
+            vertical-align: middle;
+            background-color: transparent;
+            box-shadow: none;
+            color: $light;
+            &:focus {
+                box-shadow: none;
+                border-color: $light;
+            }
+            @include placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+        .btn {
+            position: absolute;
+            height: 42px;
+            vertical-align: middle;
+            right: 5px;
+            top: 5px;
+            border-radius: 2px;
+            padding-left: 15px;
+            padding-right: 15px;
+            &:hover {
+                background-color: $light;
+                border-color: $light;
+                color: $light-red;
+            }
+            i {
+                font-size: 20px;
+                @include transitionProperty(all 0.3s ease-in-out);
+            }
+        }
+    }
+}
+
+/* Subscribe Section Style Ends ----------------------------------------------------------- */
